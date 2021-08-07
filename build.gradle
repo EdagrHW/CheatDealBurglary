@@ -1,0 +1,42 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.cn'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	uri("http://maven.aliyun.com/nexus/content/groups/public/")
+	mavenCentral()
+}
+
+dependencies {
+	// SpringBoot相关依赖
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// mybatis-plus代码生成器相关
+	implementation group: 'com.baomidou', name: 'mybatis-plus-generator', version: '3.4.1'
+	compileOnly group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.4.3.1'
+	implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.31'
+
+	// lombok
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
+
+}
+
+test {
+	useJUnitPlatform()
+}
