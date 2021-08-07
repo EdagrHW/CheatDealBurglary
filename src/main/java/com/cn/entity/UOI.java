@@ -1,5 +1,6 @@
 package com.cn.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -16,6 +17,7 @@ import java.math.BigDecimal;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
+@TableName(value = "uoi")
 public class UOI extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;

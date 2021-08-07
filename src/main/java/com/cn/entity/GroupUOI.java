@@ -1,5 +1,6 @@
 package com.cn.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -17,6 +18,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
+@TableName(value = "group_uoi")
 public class GroupUOI extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
