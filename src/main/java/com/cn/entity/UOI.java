@@ -1,6 +1,7 @@
 package com.cn.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.cn.common.RepaymentWay;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -30,7 +31,7 @@ public class UOI extends BaseEntity implements Serializable {
     /**
      * 还款方式
      */
-    private String repaymentWay;
+    private RepaymentWay repaymentWay;
 
     /**
      * 期数
@@ -66,6 +67,11 @@ public class UOI extends BaseEntity implements Serializable {
      * 债权人
      */
     private Integer creditorId;
+
+    /**
+     * 债务人
+     */
+    private Integer debtorId;
 
 
 }

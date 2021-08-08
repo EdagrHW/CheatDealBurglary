@@ -32,7 +32,12 @@ public class User extends BaseEntity implements Serializable {
     private String name;
 
     /**
-     * 手机号
+     * 身份证号码
+     */
+    private String cardNumber;
+
+    /**
+     * 手机号也就是账号
      */
     private String phone;
 
@@ -42,9 +47,14 @@ public class User extends BaseEntity implements Serializable {
     private Integer level;
 
     /**
-     * 密码
+     * 登录密码
      */
-    private Integer password;
+    private Integer loginPassword;
+
+    /**
+     * 支付密码
+     */
+    private Integer payPassword;
 
 
 }

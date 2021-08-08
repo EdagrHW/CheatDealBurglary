@@ -8,6 +8,7 @@ class CheatDealBurglaryApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

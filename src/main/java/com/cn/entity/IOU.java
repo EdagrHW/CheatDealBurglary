@@ -3,6 +3,7 @@ package com.cn.entity;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.cn.common.RepaymentWay;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -33,7 +34,7 @@ public class IOU implements Serializable {
     /**
      * 还款方式
      */
-    private String repaymentWay;
+    private RepaymentWay repaymentWay;
 
     /**
      * 期数
